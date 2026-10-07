@@ -24,6 +24,11 @@ echo "[" > "$LIST_JSON"
 first=1
 for twee in "${stories[@]}"; do
   base="$(basename "$twee" .twee)"
+  # Skip templates / private drafts (_TEMPLATE.twee, _draft-*.twee)
+  if [[ "$base" == _* ]]; then
+    echo "Skipping template/private: $base"
+    continue
+  fi
   html="$STORY_OUT/${base}.html"
   echo "Building $base..."
   "$TWEEGO" -o "$html" "$twee"
