@@ -1,0 +1,38 @@
+:: StoryData
+{
+  "ifid": "A1B2C3D4-E5F6-4789-A012-3456789ABCDE",
+  "format": "SugarCube",
+  "format-version": "2.37.3",
+  "start": "Start"
+}
+
+:: StoryTitle
+Sample Fork — VG Sketch
+
+:: Start
+You stand at a fork in a dry riverbed. Heat shimmers over the stones. Two trails continue: one toward a dark notch in the cliff, one toward a cluster of white tents.
+
+[[Enter the notch|Notch]]
+[[Approach the tents|Tents]]
+
+:: Notch
+Cool air. Scratches on the wall look deliberate — three marks, then a pause, then three again.
+
+[[Press deeper|Deeper]]
+[[Back to the fork|Start]]
+
+:: Tents
+Canvas snaps in the wind. Someone has left a kettle and a folded map weighted with a stone. No one answers your call.
+
+[[Read the map|Map]]
+[[Back to the fork|Start]]
+
+:: Deeper
+The passage narrows. You hear water — or breathing. The sketch ends here; leave a note for the next writer.
+
+[[Return to the fork|Start]]
+
+:: Map
+The map shows the riverbed and a mark inland labeled only "gate." Useful seed for a longer piece.
+
+[[Return to the fork|Start]]
