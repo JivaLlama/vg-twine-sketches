@@ -6,6 +6,8 @@
 html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
+  background-color: var(--vg3e-field);
+  min-height: 100%;
 }
 
 body {
@@ -24,7 +26,7 @@ body {
     var(--vg3e-field-texture);
   background-size: auto, auto, auto, 420px 420px;
   background-repeat: no-repeat, no-repeat, no-repeat, repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 /* Stitched outer frame */

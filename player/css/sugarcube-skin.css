@@ -4,34 +4,39 @@
 html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
+  /* Paint field on html too — Firefox/mobile often leave canvas white if only body is set */
+  background-color: var(--vg3e-field);
+  min-height: 100%;
 }
 
 body {
-  /* Dark field behind the lifted #passages parchment plate */
+  /* Dark field behind the lifted #passages parchment plate.
+     No background-attachment:fixed — breaks on Firefox desktop + mobile FF. */
   background-color: var(--vg3e-field) !important;
   background-image:
     linear-gradient(var(--vg3e-field-overlay), var(--vg3e-field-overlay)),
-    radial-gradient(ellipse at 15% 0%, rgba(168, 146, 74, 0.14), transparent 50%),
     var(--vg3e-field-texture) !important;
-  background-size: auto, auto, 420px 420px !important;
-  background-repeat: no-repeat, no-repeat, repeat !important;
-  background-attachment: fixed !important;
+  background-size: auto, 420px 420px !important;
+  background-repeat: no-repeat, repeat !important;
+  background-attachment: scroll !important;
   color: var(--vg3e-ink) !important;
   font-family: var(--vg3e-serif) !important;
   font-size: 1.125rem !important;
   line-height: 1.7 !important;
+  min-height: 100vh;
 }
 
 #story {
   max-width: calc(var(--vg3e-read-max) + 3rem);
   margin: 1rem auto !important;
+  background: transparent !important;
 }
 
 #passages {
   max-width: var(--vg3e-read-max);
   margin: 0 auto;
   padding: 1.5rem 1.35rem 2.5rem !important;
-  background: var(--vg3e-parchment-lift);
+  background: var(--vg3e-parchment-lift) !important;
   border: 2px solid var(--vg3e-stitch);
   box-shadow:
     inset 0 0 0 5px var(--vg3e-parchment),
@@ -65,7 +70,6 @@ a.link-internal:hover,
   color: var(--vg3e-copper) !important;
 }
 
-/* Choice list feel */
 .passage a.link-internal {
   display: inline-block;
   margin: 0.15rem 0;
@@ -78,22 +82,25 @@ a.link-internal:hover,
   color: var(--vg3e-parchment) !important;
 }
 
-/* Color only on UI chrome — do NOT force font-family on #ui-bar a/button
-   (that killed SugarCube's sc-icons / PUA glyphs → tofu). */
+/* Color only — never override font-family on history/toggle
+   (SugarCube puts tme-fa-icons PUA in the button text / ::before). */
 #ui-bar a,
 #ui-bar button {
   color: var(--vg3e-parchment) !important;
 }
 
-/* Readable uppercase labels for text menu items only */
 #menu li a,
 #menu-core li a,
 #menu-core li button {
   color: var(--vg3e-parchment) !important;
-  font-family: var(--vg3e-small) !important;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   font-size: 0.72rem !important;
+}
+
+/* Keep SugarCube icon face on menu ::before; only style the label text */
+#menu-core li[id|="menu-item"] a {
+  font-family: var(--vg3e-small) !important;
 }
 
 #ui-bar hr {
@@ -119,7 +126,6 @@ a.link-internal:hover,
   font-family: var(--vg3e-display) !important;
 }
 
-/* Passage / dialog buttons — not the UI-bar icon tray */
 .passage button,
 .dialog button,
 input[type="button"] {
@@ -129,60 +135,15 @@ input[type="button"] {
   border: 1px solid var(--vg3e-gold) !important;
 }
 
-/*
-  Glyph fix (Codeward): SugarCube tray/menu icons use font-family: sc-icons
-  with FA PUA codepoints. Our prior --vg3e-small !important on #ui-bar button
-  made those show as tofu. Prefer ASCII labels via ::before content so icons
-  stay readable even without relying on the embedded sc-icons face.
-*/
-#ui-bar-tray button::before,
-#menu-core li[id|="menu-item"] a::before {
-  font-family: var(--vg3e-small) !important;
-  font-weight: 700 !important;
-  font-style: normal !important;
-  letter-spacing: 0 !important;
-  text-transform: none !important;
-  color: var(--vg3e-parchment) !important;
-}
-
-#ui-bar-toggle::before {
-  content: "<" !important;
-}
-#ui-bar.stowed #ui-bar-toggle::before {
-  content: ">" !important;
-}
-#ui-bar-tray #history-backward::before {
-  content: "<" !important;
-}
-#ui-bar-tray #history-forward::before {
-  content: ">" !important;
-}
-#ui-bar-tray #history-jumpto::before {
-  content: "=" !important;
-}
-
-#menu-item-continue a::before {
-  content: ">" !important;
-}
-#menu-item-saves a::before {
-  content: "#" !important;
-}
-#menu-item-settings a::before {
-  content: "*" !important;
-}
-#menu-item-restart a::before {
-  content: "!" !important;
-}
-#menu-item-share a::before {
-  content: "^" !important;
-}
-
 #ui-bar.stowed ~ #story #passages,
 #passages {
   transition: none;
 }
 
 @media (max-width: 640px) {
+  body {
+    background-size: auto, 280px 280px !important;
+  }
   #passages {
     margin: 0.5rem;
     padding: 1.1rem 1rem 2rem !important;
