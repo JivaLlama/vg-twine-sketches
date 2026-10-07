@@ -1,0 +1,26 @@
+:: StoryData
+{
+  "ifid": "5303D461-C734-4A6D-AE49-1FBADD6588CE",
+  "format": "SugarCube",
+  "format-version": "2.30.0",
+  "start": "Start"
+}
+
+:: StoryTitle
+WORKING / non-canon — Title Here
+
+:: Start
+Replace this. Speculative VG sketch. Nothing here sticks to the bible.
+
+[[Choice A|PassageA]]
+[[Choice B|PassageB]]
+
+:: PassageA
+…
+
+[[Back|Start]]
+
+:: PassageB
+…
+
+[[Back|Start]]

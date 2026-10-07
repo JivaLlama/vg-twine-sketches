@@ -1,0 +1,49 @@
+:: StoryData
+{
+  "ifid": "CD5358A7-ABAA-460C-A18B-C35BD938240B",
+  "format": "SugarCube",
+  "format-version": "2.30.0",
+  "start": "Start"
+}
+
+:: StoryTitle
+WORKING / non-canon — Seal Day
+
+:: Start
+Smoke in the scriptorium. The Academy is burning, and you — junior scribe Verrin — have one armful left before the east stair goes.
+
+On the table: a scrap with the last attested utterance; a stack of rival witness lists; the rite manual that still works when the Word does not.
+
+[[Save the utterance scrap|Scrap]]
+[[Save the witness stack|Witnesses]]
+[[Save the empty-pipe manual|Manual]]
+
+:: Scrap
+The scrap is thin. One voice, dated, unsigned. You shove it under your tunic and run.
+
+Behind you the stacks blacken. Later, someone will say the channel died with the witnesses. You kept the pipe's last known breath instead.
+
+[[End|EndScrap]]
+
+:: Witnesses
+Names. Dates. Accusations of who heard what. Heavy. You stagger for the stair.
+
+The utterance burns. The manual burns. The Academy will argue for a century about which name was true — and you gave them the quarrel.
+
+[[End|EndWitnesses]]
+
+:: Manual
+Gesture, timing, silence where the Word used to sit. No theology — only what still binds.
+
+You save the method. The voice and the names go to ash. Years later, clerks will keep a rite nobody can explain. You already know why.
+
+[[End|EndManual]]
+
+:: EndScrap
+Sketch ends. Speculative only — nothing sticks to the bible.
+
+:: EndWitnesses
+Sketch ends. Speculative only — nothing sticks to the bible.
+
+:: EndManual
+Sketch ends. Speculative only — nothing sticks to the bible.
