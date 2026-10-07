@@ -1,0 +1,144 @@
+:: StoryData
+{
+  "ifid": "170627D9-C041-45E5-B08B-DDF3487E2489",
+  "format": "SugarCube",
+  "format-version": "2.30.0",
+  "start": "Start"
+}
+
+:: StoryTitle
+WORKING / non-canon — Aras and the Muradin Grit
+
+:: Start
+First light over the Arkovian flats. You are Aras, and the turnips do not care what you are. The plough-share catches on something and you kneel to clear it.
+
+It isn't stone. It's grit, black and glassy, and it is warm in a cold furrow. Your grandmother called this Muradin sand and told you not to say the word near the well.
+
+Up the slope, your cousin Teodh is already at the keeper's cairn, doing the morning rite: three stones turned, a cup poured out, a line no one has understood in four generations.
+
+---
+
+[[Pocket the grit and go up to Teodh|Cousin]]
+[[Keep ploughing and say nothing|Silence]]
+
+:: Silence
+You plough around the place twice. By noon your hands are shaking and the ox won't step near the furrow. Whatever's in the ground, it has stopped being just yours to keep quiet about.
+
+A cart is coming down the east road with a Bedaru awning on it.
+
+---
+
+[[Go up to Teodh after all|Cousin]]
+[[Flag down the cart|Buyer]]
+
+:: Cousin
+Teodh hears you out without stopping the rite. Stones turned. Cup poured. The line said.
+
+"I don't know what the words mean," Teodh says. "Nobody does. But my mother said you keep the rite *until something comes up out of the ground.* Maybe this is the something. Maybe it was always grit and we were waiting for a turnip farmer."
+
+---
+
+[[Ask Teodh to bless burying it|Bury]]
+[[Say the moot should know|Moot]]
+[[Ask what it might fetch|Buyer]]
+
+:: Moot
+The moot sits under the long roof at Varne. Six elders, one cough, and a scribe from the valley who writes down everything, including the cough.
+
+You set the grit on the table. It's still warm. Nobody speaks for a while.
+
+---
+
+[[Tell them where you found it|MootTruth]]
+[[Say you found it on the road|MootLie]]
+
+:: MootTruth
+They send men to your field. By evening there's a rope around the furrow and a word on everyone's lips that isn't Muradin yet but will be. The scribe asks you to repeat Teodh's line from the rite, slowly, and copies it twice.
+
+---
+
+[[Let the moot take the field|EndMootField]]
+[[Ask that Teodh's rite be kept in the record|EndMootRite]]
+
+:: MootLie
+The elders aren't fools. One of them smells the grit's warmth on your hands and looks at the soil under your nails. "Roads," she says, "don't grow turnips."
+
+---
+
+[[Confess|MootTruth]]
+[[Walk out|EndAlone]]
+
+:: Bury
+Teodh brings the cup. You dig past the plough-depth and set the grit in. Teodh says the line over it, and for the first time the line sounds like it was written for this, like a lid closing.
+
+---
+
+[[Mark the place|EndBuryMarked]]
+[[Leave no mark|EndBuryUnmarked]]
+
+:: Buyer
+The Bedaru buyer's name is Sesk. Soft gloves, quick eyes. Sesk turns the grit in the light and doesn't name a price.
+
+"I'll pay you in silver," Sesk says. "And by morning I'll have a prophecy to go with it. People pay more for things that were foretold."
+
+---
+
+[[Sell it|EndSold]]
+[[Ask what the prophecy will say|BuyerProphecy]]
+
+:: BuyerProphecy
+Sesk smiles. "That a farmer's plough would turn up the old fire and a keeper's rite would wake. Your cousin's line, if I can buy that too. Words that mean nothing are the easiest to fill."
+
+---
+
+[[Sell the grit, not the line|EndSoldGrit]]
+[[Refuse and take it to the moot|Moot]]
+
+:: EndMootField
+The field isn't yours anymore. They pay you fairly and plant a marker stone. Years from now, children will be told the grit came up under a ploughshare, and nobody will remember which farmer.
+
+**END: The furrow belongs to the moot.**
+
+[[Begin again|Start]]
+
+:: EndMootRite
+The scribe writes Teodh's line in the record beside the grit. It's still meaningless, but now it's a meaningless thing that's been written down, and a written thing gets argued over. That's a kind of life.
+
+**END: The rite enters the record.**
+
+[[Begin again|Start]]
+
+:: EndBuryMarked
+Teodh turns a fourth stone at the cairn now. Nobody asks why. In two generations they'll keep it as faithfully as the other three, and still not know.
+
+**END: A new step in an old rite.**
+
+[[Begin again|Start]]
+
+:: EndBuryUnmarked
+You plough over it in spring. The turnips come up fat that year, and the next. You never say. Teodh never says. The rite goes on as empty as before, or maybe it was never empty.
+
+**END: Buried and kept.**
+
+[[Begin again|Start]]
+
+:: EndSold
+By morning there's a prophecy in the market at Varne, and it has your name in it, spelled wrong. Pilgrims come to see the field. Teodh stops speaking to you.
+
+**END: Foretold, after the fact.**
+
+[[Begin again|Start]]
+
+:: EndSoldGrit
+Sesk's prophecy comes out thinner without the line, and it fades by harvest. Teodh keeps the words. You keep the silver, and some guilt.
+
+**END: The grit sold, the Word kept.**
+
+[[Begin again|Start]]
+
+:: EndAlone
+You walk home with grit in your pocket and nobody to tell. At the cairn, Teodh is doing the evening rite, and you find yourself listening to it properly for the first time.
+
+**END: Alone with it.**
+
+[[Begin again|Start]]
