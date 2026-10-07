@@ -47,3 +47,13 @@ Install [Tweego](https://www.motoslave.net/tweego/), then:
 ```
 
 Opens nothing by itself — open `docs/index.html` in a browser.
+
+## Enable Pages deploy (one-time)
+
+The GitHub token in this environment lacks the `workflow` scope, so the Action lives at `ci/pages.yml` until Jim copies it:
+
+1. Copy `ci/pages.yml` → `.github/workflows/pages.yml` (via GitHub web UI or a token with `workflow` scope).
+2. Repo **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+3. Re-run the workflow (or push any commit).
+
+Pages URL will be: `https://jivallama.github.io/vg-twine-sketches/`
