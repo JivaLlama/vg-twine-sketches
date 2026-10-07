@@ -1,10 +1,12 @@
-# player/
+# Player chrome (DesignBot)
 
-DesignBot owns this folder: story index chrome + SugarCube skin.
+First-pass story index + SugarCube skin.
 
-Codeward’s build copies everything here into `docs/` before/alongside Tweego output.
-Expected handoff:
+| File | Role |
+| --- | --- |
+| `index.html` | Story index |
+| `css/index.css` | Index styles |
+| `css/sugarcube-skin.css` | Link **after** SugarCube CSS in compiled story HTML |
+| `DESIGNBOT.md` | Wire-up notes for Tweego / Pages paths |
 
-- `index.html` — story list (can read `stories.json` produced by the build)
-- optional CSS / fonts / parchment skin
-- do not put compiled story HTML here; those land in `docs/stories/`
+Copy `index.html` + `css/` into the Pages root (`docs/`) on build. See `DESIGNBOT.md`.

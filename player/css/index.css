@@ -1,0 +1,232 @@
+/* VG Story Sketches — index page
+   First pass: clean, mobile-friendly. Light parchment nod only.
+   Palette aligned with sourcebook mockup (F3E6D0 / 2C241B). */
+
+:root {
+  --ground: #F3E6D0;
+  --ink: #2C241B;
+  --ink-muted: #5C5348;
+  --heading: #6B2E2A;
+  --accent: #8B5A3C;
+  --card: #Faf3e6;
+  --card-border: #D4C4A8;
+  --working: #6A8A7A;
+  --working-bg: #D5DED8;
+  --focus: #8B5A3C;
+  --max: 40rem;
+  --pad: 1.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", "Liberation Serif", serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--heading);
+  text-underline-offset: 0.15em;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--accent);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.wrap {
+  width: min(100% - 2 * var(--pad), var(--max));
+  margin-inline: auto;
+  padding-block: 2rem 3rem;
+}
+
+/* —— Header —— */
+.site-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.site-header h1 {
+  margin: 0 0 0.35rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--heading);
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--ink-muted);
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--working);
+  background: var(--working-bg);
+  border-radius: 0.25rem;
+}
+
+/* —— Story cards —— */
+.stories {
+  margin: 0 0 2.5rem;
+}
+
+.stories h2 {
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.story-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.story-card {
+  display: block;
+  padding: 1rem 1.1rem;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 0.4rem;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.story-card:hover,
+.story-card:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 1px 0 rgba(44, 36, 27, 0.06);
+  color: inherit;
+  text-decoration: none;
+}
+
+.story-card:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.story-card .title {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--heading);
+  margin-bottom: 0.25rem;
+}
+
+.story-card .meta {
+  display: block;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  margin-bottom: 0.4rem;
+}
+
+.story-card .blurb {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+/* —— How-to —— */
+.howto {
+  padding: 1.15rem 1.2rem;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 0.4rem;
+}
+
+.howto h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+.howto ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.howto li {
+  margin-bottom: 0.45rem;
+}
+
+.howto li:last-child {
+  margin-bottom: 0;
+}
+
+.howto code {
+  font-family: ui-monospace, "Cascadia Code", "Segoe UI Mono", Menlo, monospace;
+  font-size: 0.88em;
+  padding: 0.1em 0.35em;
+  background: rgba(44, 36, 27, 0.07);
+  border-radius: 0.2rem;
+}
+
+.howto .note {
+  margin: 0.85rem 0 0;
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+}
+
+/* —— Footer —— */
+.site-footer {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--card-border);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* —— Narrow phones —— */
+@media (max-width: 360px) {
+  :root {
+    --pad: 0.9rem;
+  }
+
+  .story-card {
+    padding: 0.85rem 0.9rem;
+  }
+}
