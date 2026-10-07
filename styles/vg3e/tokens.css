@@ -1,0 +1,27 @@
+/* VG3E — Valorous Garden Third-Edition style tokens
+   Homage language: stitched parchment, ornate banner, ink & oxblood.
+   No outside product names or marks. */
+
+:root {
+  --vg3e-parchment: #F3E6D0;
+  --vg3e-parchment-deep: #E8D7B8;
+  --vg3e-parchment-lift: #FAF3E6;
+  --vg3e-ink: #2C241B;
+  --vg3e-ink-muted: #5C5348;
+  --vg3e-oxblood: #6B2E2A;
+  --vg3e-copper: #8B5A3C;
+  --vg3e-gold: #A8924A;
+  --vg3e-gold-quiet: #C4B49A;
+  --vg3e-sage: #6A8A7A;
+  --vg3e-sage-bg: #D5DED8;
+  --vg3e-working-bg: #E7F0EA;
+  --vg3e-stitch: #3D3228;
+  --vg3e-banner: #2A2218;
+  --vg3e-rule: #C4B49A;
+  --vg3e-shadow: rgba(44, 36, 27, 0.18);
+  --vg3e-read-max: 40rem;
+  --vg3e-pad: 1.25rem;
+  --vg3e-serif: Georgia, "Palatino Linotype", "Book Antiqua", "Liberation Serif", serif;
+  --vg3e-display: "Palatino Linotype", Palatino, Georgia, serif;
+  --vg3e-small: system-ui, "Segoe UI", sans-serif;
+}

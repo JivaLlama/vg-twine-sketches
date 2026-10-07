@@ -1,27 +1,7 @@
-/* VG Story Sketches — index page
-   First pass: clean, mobile-friendly. Light parchment nod only.
-   Palette aligned with sourcebook mockup (F3E6D0 / 2C241B). */
+/* VG3E story index — ToC on parchment */
+@import url("./vg3e-tokens.css");
 
-:root {
-  --ground: #F3E6D0;
-  --ink: #2C241B;
-  --ink-muted: #5C5348;
-  --heading: #6B2E2A;
-  --accent: #8B5A3C;
-  --card: #Faf3e6;
-  --card-border: #D4C4A8;
-  --working: #6A8A7A;
-  --working-bg: #D5DED8;
-  --focus: #8B5A3C;
-  --max: 40rem;
-  --pad: 1.25rem;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+*, *::before, *::after { box-sizing: border-box; }
 
 html {
   font-size: 100%;
@@ -31,83 +11,132 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: var(--ground);
-  color: var(--ink);
-  font-family: Georgia, "Times New Roman", "Liberation Serif", serif;
+  color: var(--vg3e-ink);
+  font-family: var(--vg3e-serif);
   font-size: 1.0625rem;
-  line-height: 1.6;
+  line-height: 1.65;
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(168, 146, 74, 0.08), transparent 50%),
+    radial-gradient(ellipse at 80% 90%, rgba(107, 46, 42, 0.06), transparent 45%),
+    var(--vg3e-parchment);
 }
 
-a {
-  color: var(--heading);
-  text-underline-offset: 0.15em;
+/* Stitched outer frame */
+.tome {
+  max-width: 48rem;
+  margin: 1.25rem auto;
+  padding: var(--vg3e-pad);
 }
 
-a:hover,
-a:focus-visible {
-  color: var(--accent);
+.tome-frame {
+  position: relative;
+  background: var(--vg3e-parchment-lift);
+  border: 2px solid var(--vg3e-stitch);
+  box-shadow:
+    inset 0 0 0 6px var(--vg3e-parchment),
+    inset 0 0 0 8px var(--vg3e-gold-quiet),
+    0 8px 28px var(--vg3e-shadow);
+  padding: 1.75rem 1.5rem 1.5rem;
 }
 
-a:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
+.tome-frame::before,
+.tome-frame::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  width: 14px;
+  height: 36px;
+  background: var(--vg3e-stitch);
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 2px var(--vg3e-gold-quiet);
+}
+.tome-frame::before { top: 28%; }
+.tome-frame::after { top: 62%; }
+
+@media (min-width: 640px) {
+  .tome-frame { padding: 2.25rem 2.5rem 2rem 2.75rem; }
 }
 
-.wrap {
-  width: min(100% - 2 * var(--pad), var(--max));
-  margin-inline: auto;
-  padding-block: 2rem 3rem;
+.mast {
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-/* —— Header —— */
-.site-header {
-  margin-bottom: 2rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid var(--card-border);
+.mast-kicker {
+  margin: 0 0 0.65rem;
+  font-family: var(--vg3e-small);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--vg3e-ink-muted);
 }
 
-.site-header h1 {
-  margin: 0 0 0.35rem;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.75rem, 5vw, 2.25rem);
+.banner {
+  display: inline-block;
+  background: var(--vg3e-banner);
+  color: var(--vg3e-parchment);
+  border: 2px solid var(--vg3e-gold);
+  box-shadow: 0 4px 0 var(--vg3e-oxblood);
+  padding: 0.55rem 1.4rem 0.5rem;
+  margin: 0 auto 0.75rem;
+}
+
+.banner h1 {
+  margin: 0;
+  font-family: var(--vg3e-display);
+  font-size: clamp(1.35rem, 4vw, 1.85rem);
   font-weight: 700;
-  line-height: 1.2;
-  color: var(--heading);
-  letter-spacing: -0.01em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .subtitle {
-  margin: 0;
-  font-size: 0.95rem;
+  margin: 0.35rem 0 0.75rem;
   font-style: italic;
-  color: var(--ink-muted);
+  color: var(--vg3e-copper);
+  font-size: 0.98rem;
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
 }
 
 .badge {
   display: inline-block;
-  margin-top: 0.75rem;
-  padding: 0.2rem 0.55rem;
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
-  font-style: normal;
+  font-family: var(--vg3e-small);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.55rem;
+  border: 1px solid var(--vg3e-sage);
+  background: var(--vg3e-sage-bg);
+  color: var(--vg3e-sage);
+}
+
+.badge-working {
+  border-color: var(--vg3e-sage);
+  background: var(--vg3e-working-bg);
+  color: #3E5C50;
+}
+
+.rule {
+  height: 1px;
+  border: 0;
+  margin: 1.25rem 0;
+  background: linear-gradient(90deg, transparent, var(--vg3e-gold-quiet), transparent);
+}
+
+h2 {
+  margin: 0 0 0.85rem;
+  font-family: var(--vg3e-display);
+  font-size: 1.15rem;
+  color: var(--vg3e-oxblood);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--working);
-  background: var(--working-bg);
-  border-radius: 0.25rem;
-}
-
-/* —— Story cards —— */
-.stories {
-  margin: 0 0 2.5rem;
-}
-
-.stories h2 {
-  margin: 0 0 1rem;
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--ink);
 }
 
 .story-list {
@@ -120,113 +149,88 @@ a:focus-visible {
 
 .story-card {
   display: block;
-  padding: 1rem 1.1rem;
-  background: var(--card);
-  border: 1px solid var(--card-border);
-  border-radius: 0.4rem;
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  background: var(--vg3e-parchment);
+  border: 1px solid var(--vg3e-gold-quiet);
+  box-shadow: inset 0 0 0 1px rgba(168, 146, 74, 0.25);
+  padding: 1rem 1.1rem;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
 }
 
 .story-card:hover,
 .story-card:focus-visible {
-  border-color: var(--accent);
-  box-shadow: 0 1px 0 rgba(44, 36, 27, 0.06);
-  color: inherit;
-  text-decoration: none;
-}
-
-.story-card:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
+  border-color: var(--vg3e-oxblood);
+  box-shadow: 0 4px 14px var(--vg3e-shadow);
+  outline: none;
+  transform: translateY(-1px);
 }
 
 .story-card .title {
   display: block;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--heading);
-  margin-bottom: 0.25rem;
+  font-family: var(--vg3e-display);
+  font-size: 1.15rem;
+  color: var(--vg3e-oxblood);
+  margin-bottom: 0.2rem;
 }
 
 .story-card .meta {
   display: block;
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-size: 0.8rem;
-  color: var(--ink-muted);
+  font-family: var(--vg3e-small);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--vg3e-sage);
   margin-bottom: 0.4rem;
 }
 
 .story-card .blurb {
   margin: 0;
   font-size: 0.95rem;
-  color: var(--ink);
-  line-height: 1.45;
+  color: var(--vg3e-ink-muted);
 }
 
-/* —— How-to —— */
 .howto {
-  padding: 1.15rem 1.2rem;
-  background: var(--card);
-  border: 1px solid var(--card-border);
-  border-radius: 0.4rem;
-}
-
-.howto h2 {
-  margin: 0 0 0.65rem;
-  font-size: 1.05rem;
-  color: var(--ink);
+  margin-top: 0.5rem;
 }
 
 .howto ol {
   margin: 0;
-  padding-left: 1.25rem;
+  padding-left: 1.2rem;
+  color: var(--vg3e-ink);
 }
 
-.howto li {
-  margin-bottom: 0.45rem;
-}
-
-.howto li:last-child {
-  margin-bottom: 0;
-}
+.howto li { margin-bottom: 0.35rem; }
 
 .howto code {
-  font-family: ui-monospace, "Cascadia Code", "Segoe UI Mono", Menlo, monospace;
   font-size: 0.88em;
-  padding: 0.1em 0.35em;
-  background: rgba(44, 36, 27, 0.07);
-  border-radius: 0.2rem;
+  background: var(--vg3e-parchment-deep);
+  padding: 0.05em 0.3em;
+  border-radius: 2px;
 }
 
-.howto .note {
+.note {
   margin: 0.85rem 0 0;
-  font-size: 0.9rem;
-  color: var(--ink-muted);
+  padding: 0.75rem 0.9rem;
+  border-left: 3px solid var(--vg3e-gold);
+  background: rgba(168, 146, 74, 0.08);
+  font-size: 0.92rem;
+  color: var(--vg3e-ink-muted);
 }
 
-/* —— Footer —— */
 .site-footer {
-  margin-top: 2.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--card-border);
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-size: 0.8rem;
-  color: var(--ink-muted);
+  margin-top: 1.5rem;
+  text-align: center;
+  font-family: var(--vg3e-small);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--vg3e-ink-muted);
 }
 
-.site-footer p {
-  margin: 0;
-}
-
-/* —— Narrow phones —— */
-@media (max-width: 360px) {
-  :root {
-    --pad: 0.9rem;
-  }
-
-  .story-card {
-    padding: 0.85rem 0.9rem;
-  }
+.empty {
+  padding: 1rem;
+  border: 1px dashed var(--vg3e-gold-quiet);
+  color: var(--vg3e-ink-muted);
+  font-style: italic;
 }

@@ -1,217 +1,127 @@
-/* VG Story Sketches — SugarCube skin (first pass)
-   Plain / clean reading skin. Soft parchment nod only — full VG parchment later.
-   Link AFTER SugarCube’s default CSS so these overrides win.
+/* VG3E SugarCube skin — link AFTER SugarCube default CSS */
+@import url("./vg3e-tokens.css");
 
-   Tokens (aligned with sourcebook mockup):
-     ground  #F3E6D0
-     ink     #2C241B
-     heads   #6B2E2A
-     accent  #8B5A3C
-*/
-
-:root {
-  --vg-ground: #F3E6D0;
-  --vg-ink: #2C241B;
-  --vg-ink-muted: #5C5348;
-  --vg-heading: #6B2E2A;
-  --vg-accent: #8B5A3C;
-  --vg-link: #6B2E2A;
-  --vg-link-hover: #8B5A3C;
-  --vg-ui: #EDE0C8;
-  --vg-ui-border: #D4C4A8;
-  --vg-read-max: 38rem;
-}
-
-/* Page */
 html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--vg-ground) !important;
-  color: var(--vg-ink) !important;
-  font-family: Georgia, "Times New Roman", "Liberation Serif", serif !important;
+  background:
+    radial-gradient(ellipse at 15% 0%, rgba(168, 146, 74, 0.1), transparent 50%),
+    var(--vg3e-parchment) !important;
+  color: var(--vg3e-ink) !important;
+  font-family: var(--vg3e-serif) !important;
   font-size: 1.125rem !important;
-  line-height: 1.65 !important;
+  line-height: 1.7 !important;
 }
 
-/* Story region — comfortable reading column */
+#story {
+  max-width: calc(var(--vg3e-read-max) + 3rem);
+  margin: 1rem auto !important;
+}
+
 #passages {
-  max-width: var(--vg-read-max);
-  margin-inline: auto;
-  padding: 1.25rem 1.25rem 3rem;
+  max-width: var(--vg3e-read-max);
+  margin: 0 auto;
+  padding: 1.5rem 1.35rem 2.5rem !important;
+  background: var(--vg3e-parchment-lift);
+  border: 2px solid var(--vg3e-stitch);
+  box-shadow:
+    inset 0 0 0 5px var(--vg3e-parchment),
+    inset 0 0 0 7px var(--vg3e-gold-quiet),
+    0 6px 22px var(--vg3e-shadow);
 }
 
 .passage {
-  max-width: var(--vg-read-max);
+  color: var(--vg3e-ink) !important;
 }
 
 .passage h1,
 .passage h2,
 .passage h3 {
-  color: var(--vg-heading);
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: 700;
-  line-height: 1.25;
-  margin: 0 0 0.75rem;
+  font-family: var(--vg3e-display) !important;
+  color: var(--vg3e-oxblood) !important;
+  letter-spacing: 0.03em;
+  font-weight: 700 !important;
 }
 
-.passage h1 { font-size: 1.6rem; }
-.passage h2 { font-size: 1.3rem; }
-.passage h3 { font-size: 1.1rem; }
-
-.passage p {
-  margin: 0 0 1em;
-}
-
-.passage hr {
-  border: 0;
-  border-top: 1px solid var(--vg-ui-border);
-  margin: 1.5em 0;
-}
-
-/* Choice / passage links — clear tap targets on phone */
-a,
 a.link-internal,
 a.link-external,
 .passage a {
-  color: var(--vg-link) !important;
-  text-decoration: underline;
+  color: var(--vg3e-oxblood) !important;
+  text-decoration-color: var(--vg3e-copper) !important;
   text-underline-offset: 0.18em;
-  text-decoration-thickness: 1px;
 }
 
-a:hover,
-a:focus-visible,
 a.link-internal:hover,
 .passage a:hover {
-  color: var(--vg-link-hover) !important;
+  color: var(--vg3e-copper) !important;
 }
 
-a:focus-visible {
-  outline: 2px solid var(--vg-accent);
-  outline-offset: 2px;
-}
-
-/* SugarCube often wraps choices as list items — give them room */
-.passage ul,
-.passage ol {
-  margin: 1em 0;
-  padding-left: 1.2rem;
-}
-
-.passage li {
-  margin: 0.55em 0;
-}
-
-.passage li a {
-  display: inline;
-  padding: 0.15em 0;
-  /* larger effective tap area via line-height + padding */
-  line-height: 1.7;
-}
-
-/* Marked “WORKING” callouts writers may use */
-.working,
-.badge-working {
+/* Choice list feel */
+.passage a.link-internal {
   display: inline-block;
-  padding: 0.15rem 0.5rem;
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
+  margin: 0.15rem 0;
+  padding: 0.15rem 0;
+}
+
+#ui-bar {
+  background: var(--vg3e-banner) !important;
+  border-right: 2px solid var(--vg3e-gold) !important;
+  color: var(--vg3e-parchment) !important;
+}
+
+#ui-bar a,
+#ui-bar button,
+#menu-core li a,
+#menu-core li button {
+  color: var(--vg3e-parchment) !important;
+  font-family: var(--vg3e-small) !important;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #6A8A7A;
-  background: #D5DED8;
-  border-radius: 0.25rem;
-  vertical-align: middle;
+  font-size: 0.72rem !important;
 }
 
-/* UI bar / sidebar — keep quiet, same palette */
-#ui-bar {
-  background: var(--vg-ui) !important;
-  border-right: 1px solid var(--vg-ui-border) !important;
-  color: var(--vg-ink) !important;
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif !important;
-  font-size: 0.9rem !important;
+#ui-bar hr {
+  border-color: var(--vg3e-gold-quiet) !important;
 }
 
-#ui-bar a {
-  color: var(--vg-link) !important;
+#story-title {
+  font-family: var(--vg3e-display) !important;
+  color: var(--vg3e-parchment) !important;
+  letter-spacing: 0.05em;
 }
 
-#ui-bar-body {
-  color: var(--vg-ink) !important;
+.dialog {
+  background: var(--vg3e-parchment-lift) !important;
+  border: 2px solid var(--vg3e-stitch) !important;
+  color: var(--vg3e-ink) !important;
+  font-family: var(--vg3e-serif) !important;
 }
 
-#ui-bar-toggle,
-#ui-bar-history [id|="history"],
-#menu-core li,
-#menu-core li a {
-  color: var(--vg-ink) !important;
-}
-
-#ui-bar-toggle {
-  background: var(--vg-ui) !important;
-  border-color: var(--vg-ui-border) !important;
-}
-
-/* Dialogs / saves */
-#ui-dialog-body,
-.ui-dialog {
-  background: var(--vg-ground) !important;
-  color: var(--vg-ink) !important;
-  border-color: var(--vg-ui-border) !important;
-  font-family: Georgia, "Times New Roman", serif !important;
-}
-
-#ui-dialog-titlebar {
-  background: var(--vg-ui) !important;
-  color: var(--vg-heading) !important;
-  border-color: var(--vg-ui-border) !important;
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif !important;
+.dialog-title {
+  background: var(--vg3e-banner) !important;
+  color: var(--vg3e-parchment) !important;
+  font-family: var(--vg3e-display) !important;
 }
 
 button,
-input[type="button"],
-input[type="submit"],
-.macro-button {
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif !important;
-  background: var(--vg-ui) !important;
-  color: var(--vg-ink) !important;
-  border: 1px solid var(--vg-ui-border) !important;
-  border-radius: 0.3rem !important;
-  padding: 0.4rem 0.75rem !important;
-  cursor: pointer;
+input[type="button"] {
+  font-family: var(--vg3e-small) !important;
+  background: var(--vg3e-banner) !important;
+  color: var(--vg3e-parchment) !important;
+  border: 1px solid var(--vg3e-gold) !important;
 }
 
-button:hover,
-button:focus-visible,
-.macro-button:hover {
-  border-color: var(--vg-accent) !important;
-  color: var(--vg-heading) !important;
+#ui-bar.stowed ~ #story #passages,
+#passages {
+  transition: none;
 }
 
-/* Mobile: when UI bar is collapsed, keep passage readable edge-to-edge */
 @media (max-width: 640px) {
   #passages {
-    padding: 1rem 1rem 2.5rem;
-  }
-
-  body {
-    font-size: 1.0625rem !important;
-  }
-
-  .passage h1 {
-    font-size: 1.4rem;
-  }
-}
-
-/* High-contrast safety: ensure links stay visible on cream */
-@media (prefers-contrast: more) {
-  a,
-  .passage a {
-    text-decoration-thickness: 2px;
+    margin: 0.5rem;
+    padding: 1.1rem 1rem 2rem !important;
   }
 }

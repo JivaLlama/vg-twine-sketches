@@ -9,7 +9,7 @@ TWEEGO="${TWEEGO:-tweego}"
 
 if [[ -d "$ROOT/player" ]]; then
   mkdir -p "$OUT"
-  find "$ROOT/player" -mindepth 1 -maxdepth 1 ! -name 'README.md' ! -name '.gitkeep' -exec cp -a {} "$OUT"/ \;
+  find "$ROOT/player" -mindepth 1 -maxdepth 1 ! -name 'README.md' ! -name 'DESIGNBOT.md' ! -name '.gitkeep' -exec cp -a {} "$OUT"/ \;
 fi
 
 shopt -s nullglob
@@ -32,6 +32,10 @@ for twee in "${stories[@]}"; do
   html="$STORY_OUT/${base}.html"
   echo "Building $base..."
   "$TWEEGO" -o "$html" "$twee"
+  # VG3E skin after SugarCube CSS
+  if [[ -f "$OUT/css/sugarcube-skin.css" ]] && ! grep -q 'sugarcube-skin.css' "$html"; then
+    sed -i 's|</head>|<link rel="stylesheet" href="../css/sugarcube-skin.css">\n</head>|' "$html"
+  fi
   title="$base"
   if grep -q '^:: StoryTitle' "$twee"; then
     title="$(awk '/^:: StoryTitle/{getline; gsub(/\r/,""); if(NF){print; exit}}' "$twee")"

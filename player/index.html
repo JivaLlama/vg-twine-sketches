@@ -3,47 +3,86 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="VG Story Sketches — branching brainstorms for Valorous Garden writers. Not canon.">
-  <title>VG Story Sketches</title>
+  <meta name="description" content="VG Story Sketches — VG3E parchment ToC. Branching brainstorms, not canon.">
+  <title>VG Story Sketches · VG3E</title>
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-  <div class="wrap">
-    <header class="site-header">
-      <h1>VG Story Sketches</h1>
-      <p class="subtitle">branching brainstorms · not canon</p>
-      <span class="badge" title="Working drafts only">Working</span>
-    </header>
+  <div class="tome">
+    <div class="tome-frame">
+      <header class="mast">
+        <p class="mast-kicker">Valorous Garden · Story Sketches</p>
+        <div class="banner"><h1>VG Story Sketches</h1></div>
+        <p class="subtitle">branching brainstorms · not canon</p>
+        <div class="badge-row">
+          <span class="badge badge-working">Working</span>
+          <span class="badge">VG3E sheet</span>
+        </div>
+      </header>
 
-    <main>
-      <section class="stories" aria-labelledby="stories-heading">
-        <h2 id="stories-heading">Sketches</h2>
-        <ul class="story-list">
-          <li>
-            <a class="story-card" href="./stories/sample-fork.html">
-              <span class="title">Sample fork</span>
-              <span class="meta">sample · from stories/sample-fork.twee</span>
-              <p class="blurb">Scaffold sketch. WORKING brainstorm · not canon.</p>
-            </a>
-          </li>
-          <!-- Codeward: duplicate this <li> for each compiled story under stories/ -->
-        </ul>
-      </section>
+      <hr class="rule">
 
-      <section class="howto" aria-labelledby="howto-heading">
-        <h2 id="howto-heading">For writers</h2>
-        <ol>
-          <li>Write a <code>.twee</code> file under <code>stories/</code> (SugarCube format).</li>
-          <li>Push to the repo. GitHub Actions + Tweego rebuild the HTML.</li>
-          <li>GitHub Pages publishes the player; your sketch appears after the next build.</li>
-        </ol>
-        <p class="note">Label drafts <strong>WORKING</strong>. These are brainstorms, not locked lore. No Forgotten Realms / D&amp;D IP; invent nothing into VG canon here.</p>
-      </section>
-    </main>
+      <main>
+        <section class="stories" aria-labelledby="toc-heading">
+          <h2 id="toc-heading">Table of sketches</h2>
+          <ul class="story-list" id="story-list">
+            <li class="empty" id="story-loading">Opening the folio…</li>
+          </ul>
+        </section>
 
-    <footer class="site-footer">
-      <p>Valorous Garden writers · DesignBot chrome · Codeward Tweego / Pages</p>
-    </footer>
+        <hr class="rule">
+
+        <section class="howto" aria-labelledby="howto-heading">
+          <h2 id="howto-heading">For writers</h2>
+          <ol>
+            <li>Write a <code>.twee</code> under <code>stories/</code> (SugarCube).</li>
+            <li>Push to main — Tweego rebuilds HTML for Pages.</li>
+            <li>This ToC updates from <code>stories.json</code> on each build.</li>
+          </ol>
+          <p class="note">Label drafts <strong>WORKING</strong>. Brainstorms only — no locked lore from a sketch alone. Style workshop lives under <code>styles/</code> in the repo.</p>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>VG3E chrome · DesignBot · Codeward build</p>
+      </footer>
+    </div>
   </div>
+
+  <script>
+    (function () {
+      var list = document.getElementById("story-list");
+      fetch("./stories.json")
+        .then(function (r) {
+          if (!r.ok) throw new Error("no stories.json");
+          return r.json();
+        })
+        .then(function (items) {
+          list.innerHTML = "";
+          if (!items || !items.length) {
+            list.innerHTML = '<li class="empty">No sketches yet. Add a .twee under stories/.</li>';
+            return;
+          }
+          items.forEach(function (s) {
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+            a.className = "story-card";
+            a.href = s.path;
+            a.innerHTML =
+              '<span class="title"></span>' +
+              '<span class="meta"></span>' +
+              '<p class="blurb">WORKING sketch · open in the VG3E player</p>';
+            a.querySelector(".title").textContent = s.title || s.id;
+            a.querySelector(".meta").textContent = (s.id || "") + " · SugarCube";
+            li.appendChild(a);
+            list.appendChild(li);
+          });
+        })
+        .catch(function () {
+          list.innerHTML =
+            '<li class="empty">ToC needs a build (<code>stories.json</code>). Run <code>./scripts/build.sh</code> or wait for Pages.</li>';
+        });
+    })();
+  </script>
 </body>
 </html>

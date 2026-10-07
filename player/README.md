@@ -1,12 +1,13 @@
-# Player chrome (DesignBot)
+# Player chrome — VG3E
 
-First-pass story index + SugarCube skin.
+Valorous Garden Third-Edition parchment chrome for the story index and SugarCube player.
 
 | File | Role |
 | --- | --- |
-| `index.html` | Story index |
-| `css/index.css` | Index styles |
-| `css/sugarcube-skin.css` | Link **after** SugarCube CSS in compiled story HTML |
-| `DESIGNBOT.md` | Wire-up notes for Tweego / Pages paths |
+| `index.html` | ToC (loads `stories.json`) |
+| `css/vg3e-tokens.css` | Shared tokens |
+| `css/index.css` | Index sheet |
+| `css/sugarcube-skin.css` | Injected after SugarCube CSS by `scripts/build.sh` |
+| `DESIGNBOT.md` | Older wire notes |
 
-Copy `index.html` + `css/` into the Pages root (`docs/`) on build. See `DESIGNBOT.md`.
+Style experiments: `../styles/`.
