@@ -17,6 +17,8 @@
   --vg3e-working-bg: #E7F0EA;
   --vg3e-stitch: #3D3228;
   --vg3e-banner: #2A2218;
+  --vg3e-field: #1A1510;
+  --vg3e-field-overlay: rgba(26, 21, 16, 0.78);
   --vg3e-rule: #C4B49A;
   --vg3e-shadow: rgba(44, 36, 27, 0.18);
   --vg3e-read-max: 40rem;
@@ -24,4 +26,6 @@
   --vg3e-serif: Georgia, "Palatino Linotype", "Book Antiqua", "Liberation Serif", serif;
   --vg3e-display: "Palatino Linotype", Palatino, Georgia, serif;
   --vg3e-small: system-ui, "Segoe UI", sans-serif;
+  /* CC0 leather field — see player/assets/field/README.md */
+  --vg3e-field-texture: url("../assets/field/leather007-color.jpg");
 }

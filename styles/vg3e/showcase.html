@@ -6,19 +6,31 @@
   <title>VG3E · Style showcase</title>
   <link rel="stylesheet" href="./tokens.css">
   <style>
-    body { margin: 0; font-family: var(--vg3e-serif); background: var(--vg3e-parchment); color: var(--vg3e-ink); padding: 2rem; }
+    body {
+      margin: 0;
+      font-family: var(--vg3e-serif);
+      color: var(--vg3e-ink);
+      padding: 2rem;
+      background-color: var(--vg3e-field);
+      background-image:
+        linear-gradient(var(--vg3e-field-overlay), var(--vg3e-field-overlay)),
+        var(--vg3e-field-texture);
+      background-size: auto, 420px 420px;
+      background-repeat: no-repeat, repeat;
+    }
     h1 { font-family: var(--vg3e-display); color: var(--vg3e-oxblood); }
     .swatches { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0 2rem; }
-    .swatch { width: 5.5rem; text-align: center; font-size: 0.7rem; font-family: var(--vg3e-small); }
+    .swatch { width: 5.5rem; text-align: center; font-size: 0.7rem; font-family: var(--vg3e-small); color: var(--vg3e-gold-quiet); }
     .chip { height: 2.5rem; border: 1px solid var(--vg3e-stitch); margin-bottom: 0.3rem; }
     .banner { display: inline-block; background: var(--vg3e-banner); color: var(--vg3e-parchment); border: 2px solid var(--vg3e-gold); padding: 0.5rem 1.2rem; box-shadow: 0 4px 0 var(--vg3e-oxblood); }
     .card { max-width: 22rem; background: var(--vg3e-parchment-lift); border: 1px solid var(--vg3e-gold-quiet); padding: 1rem; }
     .badge { display: inline-block; font-family: var(--vg3e-small); font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.25rem 0.5rem; background: var(--vg3e-sage-bg); border: 1px solid var(--vg3e-sage); color: #3E5C50; }
+    .note { margin-top: 1.25rem; font-size: 0.85rem; color: var(--vg3e-gold-quiet); max-width: 36rem; }
   </style>
 </head>
 <body>
   <h1>VG3E showcase</h1>
-  <p>Token board for the style workshop. Not a player page.</p>
+  <p style="color:var(--vg3e-gold-quiet)">Token board for the style workshop. Dark field behind light parchment cards.</p>
   <div class="swatches">
     <div class="swatch"><div class="chip" style="background:#F3E6D0"></div>parchment</div>
     <div class="swatch"><div class="chip" style="background:#2C241B"></div>ink</div>
@@ -26,6 +38,7 @@
     <div class="swatch"><div class="chip" style="background:#8B5A3C"></div>copper</div>
     <div class="swatch"><div class="chip" style="background:#A8924A"></div>gold</div>
     <div class="swatch"><div class="chip" style="background:#6A8A7A"></div>sage</div>
+    <div class="swatch"><div class="chip" style="background:#1A1510"></div>field</div>
   </div>
   <div class="banner">Ornate banner</div>
   <p style="margin-top:1.5rem"><span class="badge">Working</span></p>
@@ -33,5 +46,6 @@
     <strong style="color:var(--vg3e-oxblood)">Sample card</strong>
     <p style="margin:0.4rem 0 0;color:var(--vg3e-ink-muted)">Story ToC tile language.</p>
   </div>
+  <p class="note">Field texture: ambientCG Leather007 (CC0) — see <code>assets/field/README.md</code>.</p>
 </body>
 </html>

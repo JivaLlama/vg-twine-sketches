@@ -7,9 +7,15 @@ html {
 }
 
 body {
-  background:
-    radial-gradient(ellipse at 15% 0%, rgba(168, 146, 74, 0.1), transparent 50%),
-    var(--vg3e-parchment) !important;
+  /* Dark field behind the lifted #passages parchment plate */
+  background-color: var(--vg3e-field) !important;
+  background-image:
+    linear-gradient(var(--vg3e-field-overlay), var(--vg3e-field-overlay)),
+    radial-gradient(ellipse at 15% 0%, rgba(168, 146, 74, 0.14), transparent 50%),
+    var(--vg3e-field-texture) !important;
+  background-size: auto, auto, 420px 420px !important;
+  background-repeat: no-repeat, no-repeat, repeat !important;
+  background-attachment: fixed !important;
   color: var(--vg3e-ink) !important;
   font-family: var(--vg3e-serif) !important;
   font-size: 1.125rem !important;
@@ -72,8 +78,15 @@ a.link-internal:hover,
   color: var(--vg3e-parchment) !important;
 }
 
+/* Color only on UI chrome — do NOT force font-family on #ui-bar a/button
+   (that killed SugarCube's sc-icons / PUA glyphs → tofu). */
 #ui-bar a,
-#ui-bar button,
+#ui-bar button {
+  color: var(--vg3e-parchment) !important;
+}
+
+/* Readable uppercase labels for text menu items only */
+#menu li a,
 #menu-core li a,
 #menu-core li button {
   color: var(--vg3e-parchment) !important;
@@ -106,12 +119,62 @@ a.link-internal:hover,
   font-family: var(--vg3e-display) !important;
 }
 
-button,
+/* Passage / dialog buttons — not the UI-bar icon tray */
+.passage button,
+.dialog button,
 input[type="button"] {
   font-family: var(--vg3e-small) !important;
   background: var(--vg3e-banner) !important;
   color: var(--vg3e-parchment) !important;
   border: 1px solid var(--vg3e-gold) !important;
+}
+
+/*
+  Glyph fix (Codeward): SugarCube tray/menu icons use font-family: sc-icons
+  with FA PUA codepoints. Our prior --vg3e-small !important on #ui-bar button
+  made those show as tofu. Prefer ASCII labels via ::before content so icons
+  stay readable even without relying on the embedded sc-icons face.
+*/
+#ui-bar-tray button::before,
+#menu-core li[id|="menu-item"] a::before {
+  font-family: var(--vg3e-small) !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  color: var(--vg3e-parchment) !important;
+}
+
+#ui-bar-toggle::before {
+  content: "<" !important;
+}
+#ui-bar.stowed #ui-bar-toggle::before {
+  content: ">" !important;
+}
+#ui-bar-tray #history-backward::before {
+  content: "<" !important;
+}
+#ui-bar-tray #history-forward::before {
+  content: ">" !important;
+}
+#ui-bar-tray #history-jumpto::before {
+  content: "=" !important;
+}
+
+#menu-item-continue a::before {
+  content: ">" !important;
+}
+#menu-item-saves a::before {
+  content: "#" !important;
+}
+#menu-item-settings a::before {
+  content: "*" !important;
+}
+#menu-item-restart a::before {
+  content: "!" !important;
+}
+#menu-item-share a::before {
+  content: "^" !important;
 }
 
 #ui-bar.stowed ~ #story #passages,

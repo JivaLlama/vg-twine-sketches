@@ -15,10 +15,16 @@ body {
   font-family: var(--vg3e-serif);
   font-size: 1.0625rem;
   line-height: 1.65;
-  background:
-    radial-gradient(ellipse at 20% 10%, rgba(168, 146, 74, 0.08), transparent 50%),
-    radial-gradient(ellipse at 80% 90%, rgba(107, 46, 42, 0.06), transparent 45%),
-    var(--vg3e-parchment);
+  /* Dark field behind the lifted parchment .tome / .tome-frame */
+  background-color: var(--vg3e-field);
+  background-image:
+    linear-gradient(var(--vg3e-field-overlay), var(--vg3e-field-overlay)),
+    radial-gradient(ellipse at 20% 10%, rgba(168, 146, 74, 0.12), transparent 50%),
+    radial-gradient(ellipse at 80% 90%, rgba(107, 46, 42, 0.1), transparent 45%),
+    var(--vg3e-field-texture);
+  background-size: auto, auto, auto, 420px 420px;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+  background-attachment: fixed;
 }
 
 /* Stitched outer frame */
@@ -225,7 +231,7 @@ h2 {
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--vg3e-ink-muted);
+  color: var(--vg3e-gold-quiet);
 }
 
 .empty {
