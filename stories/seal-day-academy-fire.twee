@@ -10,40 +10,163 @@
 WORKING / non-canon — Seal Day
 
 :: Start
-Smoke in the scriptorium. The Academy is burning, and you — junior scribe Verrin — have one armful left before the east stair goes.
+Dawn in the scriptorium. Ink still wet on your copying board. You are Verrin, junior scribe — too new for a key, old enough to know which shelf Senior Hale swears by.
 
-On the table: a scrap with the last attested utterance; a stack of rival witness lists; the rite manual that still works when the Word does not.
+A runner from the east court says the smell of smoke is wrong for kitchen fires. Hale does not look up. The utterance scrap, the witness stack, and the empty-pipe manual sit where they always sit: scrap under a weight-stone, stack bound in twine, manual closed with a strip of faded blue.
 
-[[Save the utterance scrap|Scrap]]
-[[Save the witness stack|Witnesses]]
-[[Save the empty-pipe manual|Manual]]
+---
 
-:: Scrap
-The scrap is thin. One voice, dated, unsigned. You shove it under your tunic and run.
+[[Check the east stair|MorningStair]]
+[[Stay copying|MorningCopy]]
+[[Warn Senior Hale|MorningWarn]]
 
-Behind you the stacks blacken. Later, someone will say the channel died with the witnesses. You kept the pipe's last known breath instead.
+:: MorningStair
+The east stair is cool under your palm. No flame. Only a thin gray that might be mist from the well court.
 
-[[End|EndScrap]]
+A clerk hurries past with a covered tray and will not meet your eye. When you return, Hale has moved the witness stack one shelf closer to the door.
 
-:: Witnesses
-Names. Dates. Accusations of who heard what. Heavy. You stagger for the stair.
+---
 
-The utterance burns. The manual burns. The Academy will argue for a century about which name was true — and you gave them the quarrel.
+[[Help Hale with the stack|NoonStack]]
+[[Pocket the utterance scrap early|NoonScrap]]
+[[Open the rite manual one last time|NoonManual]]
 
-[[End|EndWitnesses]]
+:: MorningCopy
+You finish the line. Then another. The rumor becomes a cough in the corridor, then a shout two floors down.
 
-:: Manual
-Gesture, timing, silence where the Word used to sit. No theology — only what still binds.
+Hale’s hand stops mid-character. “If you are going to run,” he says without looking up, “decide what is worth the weight.”
 
-You save the method. The voice and the names go to ash. Years later, clerks will keep a rite nobody can explain. You already know why.
+---
 
-[[End|EndManual]]
+[[Help Hale with the stack|NoonStack]]
+[[Pocket the utterance scrap early|NoonScrap]]
+[[Open the rite manual one last time|NoonManual]]
 
-:: EndScrap
-Sketch ends. Speculative only — nothing sticks to the bible.
+:: MorningWarn
+“Smoke that is not kitchen,” you say.
 
-:: EndWitnesses
-Sketch ends. Speculative only — nothing sticks to the bible.
+Hale sets the pen down. He listens the way he listens to bad chronology — as if the wrong year might correct itself. “Then the east stair first. And you do not touch the southern cage’s copies without me.”
 
-:: EndManual
-Sketch ends. Speculative only — nothing sticks to the bible.
+He sends you anyway. The stair is warmer than it should be.
+
+---
+
+[[Help Hale with the stack|NoonStack]]
+[[Pocket the utterance scrap early|NoonScrap]]
+[[Open the rite manual one last time|NoonManual]]
+
+:: NoonStack
+You and Hale take the witness stack between you. Names. Dates. Accusations of who heard what when the Word still answered. The twine cuts your palms.
+
+Halfway to the landing, plaster dust sifts from the ceiling. Hale says, “If the stair goes, leave me. Keep the quarrel alive.”
+
+---
+
+[[Crisis — one armful left|Crisis]]
+
+:: NoonScrap
+The scrap is thin: one voice, dated, unsigned. The last attested utterance, or the last anyone dared write down. You slide it under your tunic before Hale turns.
+
+The stack and the manual stay on the table like accusations. Smoke finds the high windows.
+
+---
+
+[[Crisis — one armful left|Crisis]]
+
+:: NoonManual
+Gesture, timing, silence where the Word used to sit. No theology — only what still binds. You mouth the sequence once. Your hands remember better than your mouth.
+
+Hale watches. “That book outlives every name in the stack,” he says. “That is not a compliment.”
+
+---
+
+[[Crisis — one armful left|Crisis]]
+
+:: Crisis
+The scriptorium is a throat full of heat. The east stair pops. You have one armful — maybe two heartbeats — before the way out is a wish.
+
+On the table, or already in your arms from noon: the utterance scrap, the witness stack, the empty-pipe manual. Choose what leaves with you.
+
+---
+
+[[Save the utterance scrap|CrisisScrap]]
+[[Save the witness stack|CrisisWitnesses]]
+[[Save the empty-pipe manual|CrisisManual]]
+
+:: CrisisScrap
+The scrap rides against your ribs. Behind you the stacks blacken. Hale’s voice is lost in the roar, or he never called.
+
+You make the courtyard. Ash on your tongue. The pipe’s last known breath is still unread.
+
+---
+
+[[Give the scrap to Hale|EndScrapHale]]
+[[Hide it in the well|EndScrapWell]]
+[[Read it once and burn it yourself|EndScrapBurn]]
+
+:: CrisisWitnesses
+Names. Heavy. You stagger. The utterance and the manual stay behind and become the same color as the air.
+
+In the courtyard the stack is still bound. Someone will untie it. Someone will lie about who did.
+
+---
+
+[[Deliver to the southern cage|EndWitCage]]
+[[Leave unsigned on the moot bench|EndWitMoot]]
+[[Sell a name to a Bedaru buyer|EndWitBedaru]]
+
+:: CrisisManual
+You save the method. Voice and names go to ash. The blue strip on the cover has curled to black at the edges.
+
+Years from now, clerks will keep a rite nobody can explain. Tonight you still have to decide who learns the gesture.
+
+---
+
+[[Teach the gesture to one clerk|EndManTeach]]
+[[Seal it unread|EndManSeal]]
+[[Practice it alone in the ash|EndManAlone]]
+
+:: EndScrapHale
+You find Hale by the well court, burned at the sleeve, alive. He takes the scrap without thanks and slides it into a sleeve already dark with soot.
+
+“Now it is a document,” he says. “Not a ghost.” Speculative only — nothing sticks to the bible.
+
+:: EndScrapWell
+At night you wrap the scrap in oilcloth and lower it behind a loose brick above the waterline. The Academy will say the channel died with the witnesses. You left the breath where the living draw.
+
+Speculative only — nothing sticks to the bible.
+
+:: EndScrapBurn
+You read it once. The words are ordinary and terrible. Then you feed the scrap to a dying coal so no cage, no moot, no buyer owns the last breath.
+
+Your hands remember the shape of the letters longer than your mind does. Speculative only — nothing sticks to the bible.
+
+:: EndWitCage
+The southern cage takes custody with clean gloves and a receipt. They will cross-index until the quarrel has footnotes.
+
+Hale, if he lives, will call it method. You call it handing the pipe to the loudest room. Speculative only — nothing sticks to the bible.
+
+:: EndWitMoot
+You leave the stack unsigned on the moot bench before dawn. No receipt. No cage seal. The names become everyone’s problem by breakfast.
+
+Somebody will invent a prophet to explain the mess. Speculative only — nothing sticks to the bible.
+
+:: EndWitBedaru
+The Bedaru buyer pays in coin that does not care about Academy years. By week's end a prophecy is circulating that uses one name from the stack and none of the dates.
+
+You bought a road home. The pipe got a story. Speculative only — nothing sticks to the bible.
+
+:: EndManTeach
+One junior clerk — younger than you — learns the gesture in a rented room that still smells of smoke. You do not explain the Word. You only show what still binds.
+
+The empty pipe has a student. Speculative only — nothing sticks to the bible.
+
+:: EndManSeal
+You wrap the manual, wax the knot, and mark it with Hale’s shelf-code so it looks official. Unread. Waiting for a century that may never ask the right question.
+
+The method sleeps. Speculative only — nothing sticks to the bible.
+
+:: EndManAlone
+In the ash of the east court you practice until your wrists ache. No witness. No student. The gesture holds or it does not — you will not know which until someone else needs it and you are gone.
+
+Speculative only — nothing sticks to the bible.
