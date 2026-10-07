@@ -4,7 +4,6 @@
 html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
-  /* Paint field on html too — Firefox/mobile often leave canvas white if only body is set */
   background-color: var(--vg3e-field);
   min-height: 100%;
 }
@@ -26,15 +25,25 @@ body {
   min-height: 100vh;
 }
 
+/*
+  Do NOT set margin-left on #story — SugarCube owns it for the UI bar
+  (20em open / 4.5em stowed; 3.5em on narrow). margin:auto !important
+  was sliding the parchment under the stowed strip on mobile.
+*/
 #story {
   max-width: calc(var(--vg3e-read-max) + 3rem);
-  margin: 1rem auto !important;
+  margin-top: 1rem !important;
+  margin-right: 1rem !important;
+  margin-bottom: 1.5rem !important;
   background: transparent !important;
+  box-sizing: border-box;
 }
 
 #passages {
   max-width: var(--vg3e-read-max);
-  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
   padding: 1.5rem 1.35rem 2.5rem !important;
   background: var(--vg3e-parchment-lift) !important;
   border: 2px solid var(--vg3e-stitch);
@@ -46,6 +55,8 @@ body {
 
 .passage {
   color: var(--vg3e-ink) !important;
+  overflow-wrap: anywhere;
+  word-wrap: break-word;
 }
 
 .passage h1,
@@ -82,8 +93,6 @@ a.link-internal:hover,
   color: var(--vg3e-parchment) !important;
 }
 
-/* Color only — never override font-family on history/toggle
-   (SugarCube puts tme-fa-icons PUA in the button text / ::before). */
 #ui-bar a,
 #ui-bar button {
   color: var(--vg3e-parchment) !important;
@@ -98,7 +107,6 @@ a.link-internal:hover,
   font-size: 0.72rem !important;
 }
 
-/* Keep SugarCube icon face on menu ::before; only style the label text */
 #menu-core li[id|="menu-item"] a {
   font-family: var(--vg3e-small) !important;
 }
@@ -140,12 +148,38 @@ input[type="button"] {
   transition: none;
 }
 
-@media (max-width: 640px) {
+/* Phone / narrow tablet — keep parchment clear of stowed UI strip */
+@media screen and (max-width: 768px) {
   body {
     background-size: auto, 280px 280px !important;
+    font-size: 1.05rem !important;
   }
+
+  #story {
+    max-width: none;
+    margin-top: 0.75rem !important;
+    margin-right: 0.6rem !important;
+    margin-bottom: 1rem !important;
+    /* margin-left still from SugarCube (~3.5em when bar stowed) */
+  }
+
   #passages {
-    margin: 0.5rem;
-    padding: 1.1rem 1rem 2rem !important;
+    max-width: none;
+    width: 100%;
+    padding: 1rem 0.85rem 1.5rem !important;
+    box-shadow:
+      inset 0 0 0 4px var(--vg3e-parchment),
+      inset 0 0 0 6px var(--vg3e-gold-quiet),
+      0 4px 14px var(--vg3e-shadow);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #story {
+    margin-right: 0.4rem !important;
+  }
+
+  #passages {
+    padding: 0.85rem 0.7rem 1.25rem !important;
   }
 }
