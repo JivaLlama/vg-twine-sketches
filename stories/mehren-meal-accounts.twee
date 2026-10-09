@@ -1,0 +1,171 @@
+:: StoryData
+{
+  "ifid": "76590236-789B-4B9E-9E1B-56BB6D31CFB9",
+  "format": "SugarCube",
+  "format-version": "2.30.0",
+  "start": "Start"
+}
+
+:: StoryTitle
+WORKING / non-canon — Mehren and the Three Meals
+
+:: Start
+Late afternoon in the Academy's east reading room. You are Mehren, third-desk clerk of the northern registers, and you have spent eleven years refusing to finish one sentence.
+
+Three accounts of the Meal of Shotar lie open in front of you. The first says he ate a shard of worldvein, the kind beasts drink where the ground seeps. The second says he ate a remnant of Aurora's wound, carried by an emissary who never went home. The third says he ate a Word-bearer of the Tyropan line, and the speech died in his mouth.
+
+Each one has a margin full of your hand. None has a verdict.
+
+The door opens without a knock. A woman in a northern travel coat, salt in the hem, sets a bone flute case on your desk like a seal.
+
+"Ostra Venn," she says. "Feud-singer of the Shasseki halls. I've come to ask you to strike one."
+
+---
+
+[[Ask which one|AskWhich]]
+[[Ask who sent her|AskWho]]
+[[Tell her the Academy doesn't strike sources|AskRefuse]]
+
+:: AskWhich
+"The third," she says, before you finish the question. "The Word-bearer. Your southern Logia love that one, because it makes Shotar a thief of speech. It makes us the people who forgot how to talk."
+
+She touches the first account, gently. "Keep the worldvein. Keep the wound, if you need a mystery. But the third is a southern sermon wearing a footnote."
+
+---
+
+[[Hear her case|SingerCase]]
+
+:: AskWho
+She smiles like you have asked the right question for the wrong reason. "Nobody sends a singer. The halls hum and I walk."
+
+Then, quieter: "A Shasseki seat is being argued in Pal Dragora next month. The claimant's lawyers are quoting your registers. All three accounts. They're using the third to say the chair is Word-empty, a mantle and nothing under it."
+
+So this is about a chair, not a meal. It is always about a chair.
+
+---
+
+[[Hear her case|SingerCase]]
+
+:: AskRefuse
+"We don't strike," you say. "We annotate."
+
+"You annotate," Ostra agrees, "and then a court reads your annotations and hangs a man. Your restraint has a body count, clerk. It's just downstream of your desk."
+
+She does not leave.
+
+---
+
+[[Hear her case|SingerCase]]
+
+:: SingerCase
+She plays nothing. She only speaks, in the cadence the northern halls use for oaths, which is very nearly a chant.
+
+"Blood keeps what the Word forgets. That's not a crime, it's a different way to remember. Your Academy prints three meals and calls it fairness, but the order you print them in is a judgment. The last one read is the one believed. Strike the third, or move it, or give me a season to sing my own account into your margins. Then call it method."
+
+Archivist Dorrance will be back from the refectory in an hour. Whatever you do, you do it before then.
+
+---
+
+[[Keep all three open|KeepAll]]
+[[Pick the southern reading, and say so plainly|PickSouth]]
+[[Give the singer a season in the margins|GiveSeason]]
+
+:: KeepAll
+"All three stay," you say. "And none of them is struck."
+
+Ostra looks at the accounts, then at you, the way a hunter looks at a fence. "Then at least do me one courtesy. Tell me what you'll do about the order."
+
+---
+
+[[Rotate the order every printing|EndRotate]]
+[[Print them side by side, in columns, no first or last|EndColumns]]
+[[Leave the order as it is and add a note on who reads it how|EndBadge]]
+
+:: PickSouth
+You pick up the pen. You have avoided this sentence for eleven years, and it costs less than you thought to write it.
+
+*The Academy reads the third account as the most consistent with Logian method. Shotar forsook the Word.*
+
+Ostra does not argue. She closes her flute case. "Good. Now everyone knows where you stand. That's more honest than three columns of fog."
+
+---
+
+[[Send the register to the Pal Dragora court as written|EndCourt]]
+[[Tear the page out before Dorrance sees it|EndTorn]]
+[[Sign it with your own name, not the Academy's|EndSigned]]
+
+:: GiveSeason
+"One season," you say. "In the margins only. The three accounts stay."
+
+She sings that night and the next, in the reading room after the lamps are trimmed. You copy what you can. It's not an account of the Meal. It's an account of how the north remembers it: the inverted stigma, the winters nobody sings, the vein that still runs.
+
+By midwinter the margins are thicker than the texts.
+
+---
+
+[[Keep her verses in the register when the season ends|EndKeepVerses]]
+[[Strike her verses when the season ends, as agreed|EndStrikeVerses]]
+[[Copy her verses out and hide the copy|EndHidden]]
+
+:: EndRotate
+Every printing, a different meal comes last. The next generation of clerks grows up arguing about which edition they first read.
+
+Ostra calls it cowardice with a schedule. Dorrance calls it method. The claimant's lawyers in Pal Dragora quote whichever edition helps, and so do the other side's. The quarrel stays open, and so does the chair.
+
+*Speculative only. Nothing here sticks to the bible.*
+
+:: EndColumns
+Three columns, one page, no first and no last. It takes the print shop a month to set.
+
+The Pal Dragora court can't find a verdict in it and has to decide the Shasseki seat on the living claimant instead of the dead founder. Ostra writes you one line, unsigned: *You made them look at the man.*
+
+*Speculative only. Nothing here sticks to the bible.*
+
+:: EndBadge
+You add one line under the three accounts. *The first is told in the north as remembrance. The third is told in the south as judgment. The second is told by people who want neither.*
+
+It's the first speaker badge in the northern registers. Twenty years later every Academy entry has one, and nobody remembers that a singer forced it.
+
+*Speculative only. Nothing here sticks to the bible.*
+
+:: EndCourt
+The register goes north with a court clerk and a sealed wax ribbon. Your sentence decides nothing on its own, but it's quoted in the first paragraph of the ruling, and the Shasseki seat is declared a mantle with no blood under it.
+
+Ostra was right about the body count. It's just slower than she thought, and it has your handwriting on it.
+
+*Speculative only. Nothing here sticks to the bible.*
+
+:: EndTorn
+The page goes into the reading-room stove. Dorrance comes back, sees the three accounts exactly as he left them, and says nothing.
+
+You have the sentence now. You just don't have it on paper. For the rest of your career, you teach the three accounts evenly and believe one of them, and your students can always tell which.
+
+*Speculative only. Nothing here sticks to the bible.*
+
+:: EndSigned
+*Mehren, third desk, reads it this way. The Academy does not.*
+
+Dorrance is furious for a week and then copies the form. By spring the northern registers are full of signed private readings stacked under unsigned public ones. The Academy keeps its restraint. The clerks finally get to have opinions. The singers start reading the signatures.
+
+*Speculative only. Nothing here sticks to the bible.*
+
+:: EndKeepVerses
+The season ends and the verses stay. The next printing of the northern registers has three accounts of the Meal and one long account of remembering it, in a cadence that's very nearly a chant.
+
+Southern readers call it contamination. Northern readers call it the first honest page. Both are quoting the same margin.
+
+*Speculative only. Nothing here sticks to the bible.*
+
+:: EndStrikeVerses
+At the first thaw you strike every verse, as agreed, with a single clean line through each so it's still legible underneath.
+
+Ostra comes to see it. She reads the struck margins for a long time. "That's worse," she says, "and better. Now it looks like something you were afraid of."
+
+*Speculative only. Nothing here sticks to the bible.*
+
+:: EndHidden
+The register goes back to three clean accounts. The copy goes behind a loose board in your rented room, wrapped in oilcloth with Ostra's name on the outside.
+
+Long after you're dead, someone finds it and prints it as a lost northern source. The Academy dates it to the Shotanate. It's actually dated by a clerk's winter, and nobody can tell.
+
+*Speculative only. Nothing here sticks to the bible.*
