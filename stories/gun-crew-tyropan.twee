@@ -1,0 +1,209 @@
+:: StoryData
+{
+  "ifid": "04BCBDCE-1FE5-4849-8506-149370B61E83",
+  "format": "SugarCube",
+  "format-version": "2.30.0",
+  "start": "Start"
+}
+
+:: StoryTitle
+WORKING / non-canon: Gun Crew, Tyropan Civil War
+
+:: Start
+Gray dawn on the ridge battery. You are Sergeant Hadde Corm, and you have four guns, eleven crew, and two orders on the limber lid.
+
+Both orders carry the same seal: the bound wheel of the Second Host. One is in red wax and comes from Captain Iselt Varo: //Fire on the column at the ford at first light.// The other is in black wax and comes from Captain Dovan Ascre: //Hold. The column at the ford is ours.//
+
+The column is down there in the mist, and you can't make out a single banner.
+
+Behind the guns, the camp historian sits on an empty powder keg with a lap desk and three clean sheets. Master Pell Orrin has written up every engagement of this war, for both sides, one after the other. He doesn't look up when he talks.
+
+"Whatever you do, Sergeant, I'll write that it was right."
+
+---
+
+[[Fire on the ford|Fire]]
+[[Hold the guns|Hold]]
+[[Turn the guns and take the hill for the other side|Flip]]
+[[Stall for one hour|Delay]]
+[[Ask Pell which wax is real|AskPell]]
+
+:: AskPell
+Pell finally looks up. "Both are real, Sergeant. The Host has had two seal-keepers since spring. Each one swears the other stole the die."
+
+"Then which captain has the right?"
+
+"Whoever's still a captain tomorrow." He dips his pen. "I don't decide the truth. I just give it a nice shape."
+
+---
+
+[[Fire on the ford|Fire]]
+[[Hold the guns|Hold]]
+[[Turn the guns and take the hill for the other side|Flip]]
+[[Stall for one hour|Delay]]
+
+:: Fire
+You give the word. Four guns kick back into their ruts, and the ridge goes white with smoke.
+
+Down at the ford, the mist tears open. You see the banners at last: the bound wheel, the same seal as on both your orders.
+
+Loader Tamsa Ferrow is the first one to say it. "Sergeant, which side was that?"
+
+---
+
+[[Keep firing|FireAgain]]
+[[Cease fire and send a runner down|FireRunner]]
+
+:: FireAgain
+Nobody thinks about the second volley. It's a drill: swab, load, ram, prime, fire. The column breaks and scatters back across the water.
+
+By noon Captain Varo rides up the ridge, grinning, and puts a hand on your shoulder in front of the whole crew.
+
+Pell's sheet is already dry. //At first light the loyal guns of the ridge broke the rebel crossing.//
+
+You don't ask him which word he settled on first.
+
+---
+
+''Ending: The Loyal Guns.''
+
+[[Start over|Start]]
+
+:: FireRunner
+You send the youngest crew member, Ebb, down the slope with a white rag tied to a rammer.
+
+Ebb doesn't come back. At midday a rider from Ascre's side does, and he's carrying Ebb's rag.
+
+"You fired on the Host's own relief," he says. "The captain wants the sergeant who gave the order."
+
+Pell has two sheets drying now, one for each outcome. He moves the second one closer to the fire.
+
+---
+
+''Ending: Two Sheets.''
+
+[[Start over|Start]]
+
+:: Hold
+You keep the guns cold. The crew stands at the trails, rammers grounded, while the mist burns off.
+
+The column crosses the ford. It doesn't climb toward you. It turns east and marches along the river road toward the Host's main camp.
+
+Tamsa watches it go. "If they were ours, we did right. If they weren't, we just let them through."
+
+---
+
+[[Send word to Varo|HoldVaro]]
+[[Send word to Ascre|HoldAscre]]
+
+:: HoldVaro
+Varo's answer comes back unsealed: //You are relieved. Hand the battery to the bearer.//
+
+The bearer is twelve years old and has never touched a gun.
+
+Pell writes without looking up. //The ridge battery wavered at the decisive hour.// He shows you the line, as if he's doing you a favor. "Wavered" is kinder than the word he could have picked.
+
+---
+
+''Ending: Wavered.''
+
+[[Start over|Start]]
+
+:: HoldAscre
+Ascre comes up the ridge himself. He's older than you expected, and his black wax is still on his thumb.
+
+"You held," he says. "Half the batteries on this river fired this morning. Yours didn't. When this is over, I'll remember the guns that waited."
+
+Pell writes: //The ridge battery, faithful to lawful command, refused to shed kin blood.// Then, more quietly, on a second sheet that he slips into his coat: //The ridge battery did nothing.//
+
+---
+
+''Ending: Faithful.''
+
+[[Start over|Start]]
+
+:: Flip
+You give an order nobody has drilled. The crew hitches the guns and drags them a quarter mile to the knoll, the one Ascre's men need if they mean to hold the river.
+
+From there your guns cover Varo's camp, not the ford.
+
+Tamsa says it plainly while the crew is still panting. "Sergeant, we just picked a side."
+
+Pell follows with his keg under one arm. "Every war has a morning like this," he says. "Most people pick by accident."
+
+---
+
+[[Open fire on Varo's camp|FlipFire]]
+[[Dig in and wait|FlipWait]]
+
+:: FlipFire
+The first shot lands short. The second goes into the horse lines. Varo's camp boils.
+
+By evening the river is Ascre's. Two days later the Host has one seal-keeper again, and the black wax is the only wax.
+
+Pell's account calls you "the battery that saw clearly." Your crew calls you "Sergeant," the same as before. Ebb starts calling you "the one who chose," and you wish he wouldn't.
+
+---
+
+''Ending: Saw Clearly.''
+
+[[Start over|Start]]
+
+:: FlipWait
+You dig in on the knoll, with the guns laid and loaded and nobody firing.
+
+Varo doesn't attack. Ascre doesn't come. Both captains can see you, and neither knows whose guns you are.
+
+At dusk a single rider comes up from each camp. They arrive within a minute of each other and stand three paces apart, each holding the same seal.
+
+Pell stops writing. For the first time all day, he has no idea how this ends.
+
+---
+
+''Ending: The Hinge Battery.''
+
+[[Start over|Start]]
+
+:: Delay
+"One hour," you tell the crew. "Fuses wet. Somebody find me a dry one slowly."
+
+Pell does look up this time. "You're giving me time."
+
+"I'm giving you the morning. You were going to write it anyway. Write it first. Then I'll know what I did."
+
+He looks at you a long while. Then he takes out all three sheets.
+
+---
+
+[[Read what he writes|DelayRead]]
+[[Take the pen away from him|DelayPen]]
+
+:: DelayRead
+He writes three versions in one hour, and his hand never shakes.
+
+In the first, the ridge guns break a rebel crossing. In the second, they refuse to fire on their kin. In the third, they turn at the decisive moment and win the river.
+
+"Pick," he says. "Whatever you do in the next minute, one of these is already true."
+
+Down at the ford, the mist is lifting. You still can't see the banners.
+
+---
+
+[[Fire on the ford|Fire]]
+[[Hold the guns|Hold]]
+[[Turn the guns and take the hill for the other side|Flip]]
+
+:: DelayPen
+You take the pen out of his hand. He lets you.
+
+"Then you write it," he says.
+
+You don't. The hour runs out, and the column crosses unfired on. By the time either captain hears about it, the battle has gone somewhere else on the river.
+
+Years later, a clerk somewhere finds no entry for the ridge battery on that morning: no order, no shot, no fault. It's the only gap in Pell Orrin's account of the whole war.
+
+---
+
+''Ending: Unwritten.''
+
+[[Start over|Start]]
