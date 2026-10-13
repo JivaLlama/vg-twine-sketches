@@ -16,7 +16,7 @@ Short branching text adventures for Valorous Garden brainstorming. Writers push 
 {
   "ifid": "<generate a unique UUID>",
   "format": "SugarCube",
-  "format-version": "2.37.3",
+  "format-version": "2.30.0",
   "start": "Start"
 }
 
