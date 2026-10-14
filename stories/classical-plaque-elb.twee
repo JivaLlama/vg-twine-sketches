@@ -1,0 +1,123 @@
+:: StoryData
+{
+  "ifid": "D5F169FE-86B6-4495-A449-EE6E072DE4BE",
+  "format": "SugarCube",
+  "format-version": "2.30.0",
+  "start": "Start"
+}
+
+:: StoryTitle
+WORKING / non-canon — The Classical Plaque
+
+:: Start
+You are Iskel, garrison clerk of the Shotai post at Low Ferrow. Your job is counting: sacks, oaths, coins of occupation tax. This morning the paving crew calls you over to the forum. Under a cracked stone lies bronze, green at the edges.
+
+The script is classical, the old Eld Lopesh hand. You read it slowly. *The ford and the upper ward, gifted to the House of Varrow forever, by the king's own word.* There is a seal. There is a king's name.
+
+The moot of Low Ferrow has paid tax on that ford for thirty years.
+
+---
+
+[[Report it to Captain Durren|Captain]]
+[[Show it to the old Feud-singer first|Singer]]
+
+:: Captain
+Captain Durren looks at the plaque the way he looks at a lame horse. "Bronze is bronze. Melt it. We need fittings."
+
+On your way out, a Bedaru trader is waiting by the gate, Hollis by name, as if somebody had sent for him. "I hear you dug up a king," Hollis says. "Kings sell."
+
+---
+
+[[Melt it as ordered|Melt]]
+[[Hear Hollis out|Bedaru]]
+[[Take it to the Feud-singer instead|Singer]]
+
+:: Singer
+Old Maeve Corran sings the feud-lines at every moot. She runs her thumb over the king's name and her eyes go wet.
+
+"My grandmother sang that the Varrows held the ford. Nobody believed her. Read this in the square, clerk, and every song in this ward gets truer by a hand."
+
+---
+
+[[Read it in the square|Read]]
+[[Ask what the moot would do with it|Moot]]
+
+:: Read
+You stand on the forum steps at noon and read the plaque aloud, in the old script's sound, then in plain speech.
+
+The square goes quiet, then very loud. Three families claim to be Varrows by dusk.
+
+---
+
+[[Stand by what it says|EndRead]]
+[[Let Maeve sing it instead of you|EndSong]]
+
+:: Melt
+The forge-boy takes it with tongs. The king's name runs first, then the seal.
+
+That night you find you remember every word. Memory, it turns out, is not a fitting.
+
+---
+
+[[Write it down in the garrison ledger|EndLedger]]
+[[Say nothing, ever|EndMelt]]
+
+:: Bedaru
+Hollis offers more silver than your post pays in a year. "And you keep a rubbing, of course. A rubbing is just paper. Paper is safe."
+
+---
+
+[[Sell, and keep the rubbing|EndRubbing]]
+[[Refuse and go to the moot|Moot]]
+
+:: Moot
+The moot elders meet in the cooper's loft so the garrison won't hear. They don't want a king. Kings bring captains with them. They want a quiet paper, something that halves the tax without anyone shouting.
+
+"Help us forge a claim," says the eldest. "Something smaller. True enough. Hide the bronze."
+
+---
+
+[[Forge the quieter claim|EndForge]]
+[[Refuse; the plaque says what it says|Read]]
+
+:: EndRead
+Durren arrests you, then releases you, because there's a crowd. The tax isn't lifted. But now every ward in the lowland is prying up its forum stones, looking for kings.
+
+**END: The past, spoken aloud.**
+
+[[Begin again|Start]]
+
+:: EndSong
+Maeve sings it, and a song can't be melted. Within a year the plaque is only a rumor and the song is canon in every tavern. Nobody asks whether the song got the king's name right.
+
+**END: The past, sung.**
+
+[[Begin again|Start]]
+
+:: EndLedger
+You write the inscription into the garrison ledger, in the occupier's book, under "salvage, bronze, one." A century later, a Lopadian scholar finds it there. The empire that melted the claim also kept it.
+
+**END: Erased in metal, kept in ink.**
+
+[[Begin again|Start]]
+
+:: EndMelt
+The fittings hold the gate hinges true for forty years. Nobody knows that the gate swings on a king's word.
+
+**END: Melted.**
+
+[[Begin again|Start]]
+
+:: EndRubbing
+Hollis sells the plaque in the south to a house that suddenly remembers it is Varrow. Your rubbing sits in a box. Every few years someone offers to buy it. You never decide whether you're keeping history or a lever.
+
+**END: The past, privately held.**
+
+[[Begin again|Start]]
+
+:: EndForge
+The forged claim is modest and believable, and it works: the tax on the ford is halved. The bronze stays under the cooper's floor. The moot now keeps two pasts: the true one hidden and the useful one filed.
+
+**END: A quieter truth.**
+
+[[Begin again|Start]]
